@@ -1,0 +1,204 @@
+version: "3.1"
+
+nlu:
+- intent: saludo
+  examples: |
+    - Hola
+    - Holi
+    - Alo
+    - Como va?
+    - Hola, como estas?
+    - Hola que tal?
+    - Buenas
+    - Buen dia
+    - Buenas tardes
+
+- intent: despedida
+  examples: |
+    - Chau
+    - Nos vemos
+    - Chau, gracias
+    - Chauchis
+    - HASTA LUEGO
+    - Adios
+
+- intent: afirmacion
+  examples: |
+    - Si
+    - Si obvio
+    - Claro
+    - Por su pollo
+    - Por supuesto
+    - Asi es
+    - Sip
+    - Exacto
+    - Asi mismo
+    - Si puedo
+
+- intent: negacion
+  examples: |
+    - Ni ahi
+    - Nop
+    - Na
+    - No
+    - Claro que no
+    - No puedo
+
+
+
+- intent: Llegar
+  examples: |
+    - Llegué
+    - Estoy
+    - Toy
+    - Toy aca
+    - Ya toy
+    - Ya estoy
+    - Aqui
+    - Aca
+    - Listo, ya llegue
+    - Ya llegue
+    - Ahora si, ya estoy aca
+    - Ahora si, ya llegue
+
+- intent: informar_nombre   
+  examples: |
+    - Me llamo Carlos
+    - Mi nombre es Luis
+    - Soy Miguel
+    - Javier es mi nombre
+    - Me dicen Maria
+    - Llamame Luisina
+    - Llamame Florencia
+    - Llamame Julieta
+    - Llamame Santiago
+    - Me llamo Hector
+    - Me llamo Carolina
+    - Me llamo Veronica
+    - Me llamo Fernando
+    - Me llamo Ariel
+    - Me llamo Sofia
+    - Mi nombre es Lucia
+    - Mi nombre es Mariana
+    - Mi nombre es Juana
+    - Soy Micaela
+    - Soy Mailen
+    - Soy Cecilia
+    - Antonela es mi nombre
+    - Rocio es mi nombre
+    - Me dicen Matias
+    - Me dicen Pedro
+    - Me dicen Ignacio
+    - Matias
+    - [Maria](PER) 
+    - [Alberto] (PER) 
+    - [Diego] (PER) 
+    - [Hernan] (PER) 
+    - [Florencia] (PER) 
+    - [Maria] (PER) 
+    - [Micaela] (PER) 
+    - Nahuel
+- intent: expresar_nombre
+  examples: |
+    - Quiero decirte mi nombre
+    - Dar nombre
+    - Sabes mi nombre?
+    - Recorda mi nombre
+    - Acordate de como me llamo
+
+
+- intent: pedir_instrucciones
+  examples: |
+    - Instrucciones
+    - Como se juega?
+    - Dame las instrucciones
+    - Cuales son las reglas del juego
+    - Reglas del juego
+    - Reglas
+    - Que tengo que hacer?
+    - Hay alguna regla que tenga que saber?
+
+- intent: ir_PSM
+  examples: |
+    - Quiero ir a la plaza san martin
+    - Ir a la plaza san martin
+    - Ir a la plaza
+    - Necesito ir a la plaza
+    - Buenisimo, vamos a la plaza
+    - Estoy listo para ir a la plaza
+    - Necesito las indicaciones
+
+- intent: cuatro_aguilas
+  examples: |
+    - Hay [cuatro] (cuatro) condores
+    - Son [cuatro] (cuatro)
+    - [Cuatro](cuatro)
+    - Hay [4] (cuatro) condores
+    - [4] (cuatro)
+    - [4] (cuatro) condores
+    - [cuatro] (cuatro) condores
+    - [04] (cuatro) condores
+    - El número de condores es [cuatro] (cuatro)
+    - La cantidad de condores es de [cuatro] (cuatro)
+    - Observo [4] (cuatro) condores
+    - Hay un total de [cuatro] (cuatro) condores presentes.
+    - [Cuatro] (cuatro) es el número de condores que veo.
+    - La cantidad de condores es de [4] (cuatro)
+    - la cifra de condores es de [cuatro] (cuatro)
+
+
+- intent: no_sabe_llegar
+  examples: |
+    - Me perdi
+    - No se llegarm
+    - ¿Como se llega?
+    - Donde es?
+    - Como llego?
+    - Hacia donde tengo que ir?
+    - Por donde
+    - Quiero direcciones
+    - Me das direcciones
+    - No se como llegar
+    - No se por donde ir
+    - che, no se llegar
+    - Che me perdi
+    
+- intent: otra_cantidad
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - uno
+    - dos
+    - tres
+    - cinco
+    - seis
+    - siete
+    - ocho
+    - nueve
+    - diez
+- intent: ver_video
+  examples: |
+    - Quiero ver el video
+    - Ver video
+    - Y el video
+    - Video
+    - Pasame el video
+    - Dame el video
+
+- intent: confirmar_video
+  examples: |
+    - Ya lo vi
+    - Listo, lo vi
+    - Ya esta
+    - Ya vi
+    - Vi el video
+    - Listo el video
+    - Buen video, ya lo vi
+    - Ya vi el video, y ahora?

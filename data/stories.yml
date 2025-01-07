@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+- story: inicial
+  steps:
+  - intent: saludo 
+  - action: utter_rta_saludo
+  - intent: informar_nombre
+    entities:
+      - PER
+  - action: utter_usar_nombre
+  - action: utter_capacidades
+  - action: utter_presentacion_solen
+  - action: action_restart
+  
+
+- story: PSM_con_orientacion
+  steps:
+  - intent: ir_PSM
+  - action: utter_ok_avisame
+  - intent: no_sabe_llegar
+  - action: utter_orientaciones
+  - intent: Llegar
+  - action: utter_pregunta_san_martin
+  - intent: cuatro_aguilas
+  - action: utter_cuatro
+  - action: action_restart
+
+
+- story: PSM_feliz
+  steps:
+  - intent: ir_PSM
+  - action: utter_ok_avisame
+  - intent: Llegar
+  - action: utter_pregunta_san_martin
+  - intent: cuatro_aguilas
+  - action: utter_cuatro
+  - action: action_restart
+
+
+- story: video_PSM
+  steps:
+  - intent: ver_video
+  - action: utter_video_PSM
+  - intent: confirmar_video 
+  - action: utter_despedida
+  - action: action_restart

@@ -1,0 +1,26 @@
+version: "3.1"
+
+#- rule: Active form
+#  steps:
+#  - intent: expresar_nombre
+#  - action: utter_preg_nombre
+#  - action: name_form
+#  - active_loop: name_form
+
+#- rule: Submit form
+#  condition:
+#    - active_loop: name_form
+#    steps:
+#    - action: name_form
+#    - active_loop: null
+#    - slot_was_set:
+#      requested_slot: null
+#    - action: utter_usar_nombre
+
+
+rules:
+
+- rule: dar las instrucciones
+  steps:
+  - intent: pedir_instrucciones
+  - action: utter_reglas

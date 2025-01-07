@@ -1,0 +1,131 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmacion
+  - negacion
+  - Llegar
+  - informar_nombre
+  - expresar_nombre
+  - pedir_instrucciones
+  - ir_PSM
+  - cuatro_aguilas
+  - no_sabe_llegar
+  - otra_cantidad
+  - ver_video
+  - confirmar_video
+
+
+
+entities:
+  - PER
+  - cuatro
+#forms:
+#  name_form:
+#    required_slots:
+#      - informar_nombre
+
+slots:
+  PER:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: PER
+  
+  cuatro:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: cuatro
+#        conditions: 
+#        - active_loop: name_form
+
+responses:
+  utter_rta_saludo:
+  - text: "Hola, yo soy Solen.IA y vengo del futuro.
+Vengo del año 2049 y necesito ayuda de manera urgente para completar una misión.
+Antes de empezar, necesito saber con quien estoy trabajando.
+¿Como es tu nombre?"
+
+  utter_usar_nombre:
+  - text: 'Gracias {PER}. Es un placer conocerte. 
+  Ahora es mi momento de presentarme'
+
+  utter_presentacion_solen:
+  - text: '
+  Habiendo dicho esto, que te parece si comenzamos con nuestro primer desafio. Para resolver el enigma y comenzar a jugar solo debes pedirme las indiciaciones hacia la Plaza San Martin'
+
+  utter_capacidades:
+  - text: '
+  Estoy aquí para ayudarte. Aca están algunas de las cosas de las que soy capaz:
+  
+  * Puedes preguntarme las reglas de juego en cualquier momento y te las explicaré sin problema.
+   
+  * Tambien tengo algunos trabajos auxiliares si lo que quieres es ganar mas puntos.
+
+  * No te olvides de consultarme tu inventario si lo deseas.
+  
+  * Voy a ser quien te guie en el descubrimiento de los enigmas, solo debes consultar por ellos y por las pistas que te ayudarán a avanzar.'
+
+
+  utter_reglas:
+  - text: "Esa es una excelente pregunta, con una sencilla respuesta. 
+  
+Tenés que descifrar tres enigmas. Para resolverlos podés leerlo, releerlo, mirar a tu alrededor, pensar, pedir ayuda. 
+También, si necesitás, podés pedirme una pista. Aunque te puedo dar un máximo de tres. 
+"
+
+
+  utter_despedida:
+  - text: "Perfecto!
+  
+  Ese video esta lleno de pistas que te ayudarán a resolver el siguiente enigma. Gracias por haber llegado hasta aca. Sigamos jugando :D"
+
+
+
+  utter_video_PSM:
+  - text: 'Ahora te voy a contar una cosa que  capaz no te alegre tanto: mientras estás leyendo esto, yo ya me fui. O mejor dicho, recién voy a estar por nacer jaja. Ahora estás hablando con SolenIA, una inteligencia artificial que está programada a mi imagen y semejanza para poder interactuar con vos, y ayudarte durante toda la misión. 
+
+Te dejé un video que grabé antes de irme para explicar algunas cosas. Fijate dónde podés verlo sin riesgo. 
+
+Para verlo andá al mapa y presioná el ícono del monumento a San Martín.
+
+Avisame cuando lo hayas visto o si preferís que te escriba. '
+
+
+  utter_ok_avisame:
+  - text: 'Cuando llegues, avisá acá en el chat. Escribí ya llegué'
+
+  utter_pregunta_san_martin:
+  - text: '¡Excelente! Bueno, perdón por esto, pero para saber si realmente estás ahí, voy a pedirte una palabra clave.
+
+
+Andá hasta la estatua central, y escribí en palabra cuántos cóndores custodian al General San Martín. Si tenés alguna dificultad, avisame.'
+
+
+  utter_orientaciones:
+  - text: 'Guiate por el mapa de juego. La plaza San Martín está al centro del mapa, entre las calles Independencia y Buenos Aires, de norte a sur, y Rosario de Santa Fe y 27 de abril, de este a oeste. 
+La estatua de San Martín está en el medio de la plaza.
+Pero además, podés usar todas las aplicaciones de tu teléfono para ubicarte en la ciudad, y también podés preguntar a alguien, fingiendo que sos turista.
+
+Avisame cuando llegues.
+'
+
+
+  utter_cuatro:
+  - text: '¡¡¡Correcto!!! Has completado el primer enigma y vas por buen camino.
+
+  Gracias por venir, aunque todavía no te conté casi nada.
+Para continuar, debes pedirme el video que te ayudará a comprender que está pasando y como puedes ayudarme
+
+'
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
